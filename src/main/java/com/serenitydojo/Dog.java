@@ -4,10 +4,12 @@ public class Dog extends Pet {
     private String favoriteToy;
     private boolean isFed = false;
 
+    private int age;
     public static final String DOG_NOISE = "Woof";
 
     public Dog(String name, String favoriteToy, int age) {
-        super(name, age);
+        super(name);
+        this.age = age;
         this.favoriteToy = favoriteToy;
     }
 
@@ -33,5 +35,13 @@ public class Dog extends Pet {
     @Override
     public String play() {
         return "plays with bone";
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
